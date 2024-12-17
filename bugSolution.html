@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+  <button onclick="myFunction()">Click Me</button>
+
+  <script>
+    function myFunction() {
+      let originalContent = document.getElementById("myDiv").innerHTML; // Store original content
+      document.getElementById("myDiv").innerHTML = ""; // Clear the div
+      // Restore content, or add new content
+      document.getElementById("myDiv").innerHTML = "<p>Content restored</p>";
+
+    }
+  </script>
+</body>
+</html>
